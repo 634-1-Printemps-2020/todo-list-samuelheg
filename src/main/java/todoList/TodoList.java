@@ -17,8 +17,14 @@ public class TodoList {
         return tache;
     }
 
-    public Tache annulerTache(){
-        return null;
+    public Tache annulerTache(User user, Tache tache){
+        if(todoMap.get(user).contains(tache)){
+            Tache tacheAModifier = todoMap.get(user).get(todoMap.get(user).indexOf(tache));
+            tacheAModifier.setStatut(Statut.CANCELED);
+            tacheAModifier.setResolution(Resolution.DONE);
+
+        }
+        return tache;
     }
 
     public List<Tache> getTachesUser(User user){

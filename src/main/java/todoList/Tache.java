@@ -66,4 +66,5 @@ public class Tache {
     public int hashCode() {
         return Objects.hash(utilisateur, description, date, statut, resolution);
     }
+
 }
